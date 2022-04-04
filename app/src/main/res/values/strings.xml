@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TFSPushTool</string>
+    <string name="tfs_address">TFS Address</string>
+    <string name="token_information">Token information</string>
+</resources>
