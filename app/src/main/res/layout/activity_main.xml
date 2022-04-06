@@ -6,47 +6,82 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/imgbin_splash_pattern_png" />
+
     <EditText
         android:id="@+id/tfsAddress"
         android:layout_width="349dp"
-        android:layout_height="46dp"
+        android:layout_height="48dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="56dp"
         android:layout_marginEnd="28dp"
+        android:autofillHints=""
         android:hint="@string/tfs_address"
         android:inputType="text"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/tokenInformation"
         android:layout_width="355dp"
-        android:layout_height="39dp"
+        android:layout_height="48dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="28dp"
+        android:autofillHints=""
         android:hint="@string/token_information"
         android:inputType="text"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tfsAddress"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/tfsAddress" />
 
     <EditText
         android:id="@+id/userName"
         android:layout_width="351dp"
-        android:layout_height="43dp"
+        android:layout_height="48dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="28dp"
-        android:hint="User Name"
+        android:autofillHints=""
+        android:hint="@string/user_name"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tokenInformation"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/tokenInformation" />
+
+
+    <EditText
+        android:id="@+id/message"
+        android:layout_width="352dp"
+        android:layout_height="201dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="28dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/message"
+        android:inputType="textMultiLine"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userName"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/pushDataToTfs"
@@ -55,9 +90,11 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="60dp"
-        android:text="Push"
+        android:text="@string/push"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="DuplicateClickableBoundsCheck" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,4 +2,7 @@
     <string name="app_name">TFSPushTool</string>
     <string name="tfs_address">TFS Address</string>
     <string name="token_information">Token information</string>
+    <string name="user_name">User Name</string>
+    <string name="message">Message</string>
+    <string name="push">Push</string>
 </resources>

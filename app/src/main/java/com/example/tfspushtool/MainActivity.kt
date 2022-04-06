@@ -19,6 +19,6 @@ class MainActivity : AppCompatActivity() {
         var tfsAddress = binding.tfsAddress.text.toString();
         var tokenInformation = binding.tokenInformation .text.toString();
         var userName = binding.userName.text.toString();
-
+        var message =binding.message.text.toString();
     }
 }
