@@ -1,4 +1,4 @@
-package com.example.tfspushtool.network
+package com.example.tfspushtool.apiservice
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.Moshi
@@ -27,7 +27,7 @@ interface PushTfsApiService {
     suspend fun pushTFSUserDataToTfs(@Body requestBody: TFSUserData): Boolean
 }
 
-object MarsApi {
+object TfsApi {
     fun getInstance(): Retrofit {
         return retrofit
     }
