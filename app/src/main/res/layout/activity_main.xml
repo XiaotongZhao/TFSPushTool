@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
@@ -15,7 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/toa_heftiba_dakdfhdhmsa_unsplash" />
+        app:srcCompat="@drawable/sincerely_media_dgqf1dukutm_unsplash" />
 
     <EditText
         android:id="@+id/tfsAddress"
@@ -27,7 +27,7 @@
         android:autofillHints=""
         android:hint="@string/tfs_address"
         android:inputType="text"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -42,7 +42,7 @@
         android:autofillHints=""
         android:hint="@string/token_information"
         android:inputType="text"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tfsAddress" />
@@ -57,7 +57,7 @@
         android:autofillHints=""
         android:hint="@string/user_name"
         android:inputType="text"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tokenInformation" />
@@ -75,7 +75,7 @@
         android:gravity="start|top"
         android:hint="@string/message"
         android:inputType="textMultiLine"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
