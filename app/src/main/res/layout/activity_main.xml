@@ -22,25 +22,26 @@
         android:layout_width="349dp"
         android:layout_height="48dp"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="28dp"
         android:autofillHints=""
         android:hint="@string/tfs_address"
         android:inputType="text"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/tokenInformation"
+        android:id="@+id/token"
         android:layout_width="355dp"
         android:layout_height="48dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="28dp"
         android:autofillHints=""
-        android:hint="@string/token_information"
+        android:hint="@string/token"
         android:inputType="text"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,38 +49,82 @@
         app:layout_constraintTop_toBottomOf="@+id/tfsAddress" />
 
     <EditText
-        android:id="@+id/userName"
+        android:id="@+id/assignedTo"
         android:layout_width="351dp"
         android:layout_height="48dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="28dp"
         android:autofillHints=""
-        android:hint="@string/user_name"
+        android:hint="@string/assignedTo"
         android:inputType="text"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tokenInformation" />
-
+        app:layout_constraintTop_toBottomOf="@+id/token" />
 
     <EditText
-        android:id="@+id/message"
-        android:layout_width="352dp"
-        android:layout_height="201dp"
+        android:id="@+id/backlogTitle"
+        android:layout_width="351dp"
+        android:layout_height="48dp"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="28dp"
+        android:autofillHints=""
+        android:hint="@string/backlogTitle"
+        android:inputType="text"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/assignedTo" />
+
+    <EditText
+        android:id="@+id/iterationPath"
+        android:layout_width="351dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="28dp"
+        android:autofillHints=""
+        android:hint="@string/iterationPath"
+        android:inputType="text"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backlogTitle" />
+
+    <EditText
+        android:id="@+id/areaPath"
+        android:layout_width="351dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="28dp"
+        android:autofillHints=""
+        android:hint="@string/areaPath"
+        android:inputType="text"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iterationPath" />
+
+    <EditText
+        android:id="@+id/workItemContent"
+        android:layout_width="351dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="28dp"
         android:autofillHints=""
         android:ems="10"
         android:gravity="start|top"
-        android:hint="@string/message"
+        android:hint="@string/workItemContent"
         android:inputType="textMultiLine"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userName"
+        app:layout_constraintTop_toBottomOf="@+id/areaPath"
         tools:ignore="MissingConstraints" />
 
     <Button

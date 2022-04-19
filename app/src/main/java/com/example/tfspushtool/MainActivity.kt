@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tfspushtool.apiservice.PushTfsApiService
-import com.example.tfspushtool.apiservice.TFSUserData
 import com.example.tfspushtool.apiservice.TfsApi
+import com.example.tfspushtool.apiservice.TfsData
 import com.example.tfspushtool.databinding.ActivityMainBinding
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -28,14 +28,21 @@ class MainActivity : AppCompatActivity() {
 
     private  fun initData() {
         var sharedPreferences = getSharedPreferences("Data", Context.MODE_PRIVATE)
-        val userName = sharedPreferences.getString("userName", "")
         val tfsAddress = sharedPreferences.getString("tfsAddress", "")
-        val tokenInformation = sharedPreferences.getString("tokenInformation", "")
-        val message = sharedPreferences.getString("message", "")
-        binding.userName.setText(userName)
+        val token = sharedPreferences.getString("token", "")
+        val assignedTo = sharedPreferences.getString("assignedTo", "")
+        val backlogTitle = sharedPreferences.getString("backlogTitle", "")
+        val iterationPath = sharedPreferences.getString("iterationPath", "")
+        val areaPath = sharedPreferences.getString("areaPath", "")
+        val workItemContent = sharedPreferences.getString("workItemContent", "")
+
         binding.tfsAddress.setText(tfsAddress)
-        binding.tokenInformation.setText(tokenInformation)
-        binding.message.setText(message)
+        binding.token.setText(token)
+        binding.assignedTo.setText(assignedTo)
+        binding.backlogTitle.setText(backlogTitle)
+        binding.iterationPath.setText(iterationPath)
+        binding.areaPath.setText(areaPath)
+        binding.workItemContent.setText(workItemContent)
 
     }
 
@@ -44,26 +51,36 @@ class MainActivity : AppCompatActivity() {
         var sharedPreferences = getSharedPreferences("Data", Context.MODE_PRIVATE)
         var edit = sharedPreferences.edit()
 
-        val userName = binding.userName.text.toString()
         val tfsAddress = binding.tfsAddress.text.toString()
-        val tokenInformation = binding.tokenInformation.text.toString()
-        val message = binding.message.text.toString()
+        val token = binding.token.text.toString()
+        val assignedTo = binding.assignedTo.text.toString()
+        val backlogTitle = binding.backlogTitle.text.toString()
+        val iterationPath = binding.iterationPath.text.toString()
+        val areaPath = binding.areaPath.text.toString()
+        val workItemContent = binding.workItemContent.text.toString()
 
-        edit.putString("userName",userName)
         edit.putString("tfsAddress",tfsAddress)
-        edit.putString("tokenInformation",tokenInformation)
-        edit.putString("message",message)
+        edit.putString("token",token)
+        edit.putString("assignedTo",assignedTo)
+        edit.putString("backlogTitle",backlogTitle)
+        edit.putString("iterationPath",iterationPath)
+        edit.putString("areaPath",areaPath)
+        edit.putString("workItemContent",workItemContent)
+
         edit.apply()
 
-        val userInfo = TFSUserData(
-            userName =  userName,
-            tfsAddress =  tfsAddress,
-            tokenInformation =  tokenInformation,
-            message = message
+        val tfsData = TfsData(
+            tfsAddress = tfsAddress,
+            token = token,
+            assignedTo = assignedTo,
+            backlogTitle = backlogTitle,
+            iterationPath = iterationPath,
+            areaPath =  areaPath,
+            workItemContent = workItemContent
         )
 
         GlobalScope.launch {
-                val result = apiInstance.pushTFSUserDataToTfs(userInfo)
+                val result = apiInstance.pushTFSUserDataToTfs(tfsData)
                 Log.i("res is",result.toString());
             }
     }

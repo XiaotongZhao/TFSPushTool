@@ -9,7 +9,7 @@ import retrofit2.http.Body
 import retrofit2.http.POST
 
 
-private const val BASE_URL = "http://192.168.8.101:5050/"
+private const val BASE_URL = "http://192.168.8.101:666/"
 
 
 private val moshi = Moshi.Builder()
@@ -23,8 +23,8 @@ private val retrofit = Retrofit.Builder()
 
 
 interface PushTfsApiService {
-    @POST("api/Algorithms/PushTFSUserDataToTfs")
-    suspend fun pushTFSUserDataToTfs(@Body requestBody: TFSUserData): Boolean
+    @POST("api/TFS/PushTfsDataToTfs")
+    suspend fun pushTFSUserDataToTfs(@Body requestBody: TfsData): Boolean
 }
 
 object TfsApi {
@@ -34,13 +34,19 @@ object TfsApi {
 }
 
 
-data class TFSUserData(
+data class TfsData(
     @Json(name = "tfsAddress")
     val tfsAddress: String,
-    @Json(name = "tokenInformation")
-    val tokenInformation: String,
-    @Json(name = "userName")
-    val userName: String,
-    @Json(name = "message")
-    val message: String
+    @Json(name = "token")
+    val token: String,
+    @Json(name = "backlogTitle")
+    val backlogTitle: String,
+    @Json(name = "assignedTo")
+    val assignedTo: String,
+    @Json(name = "iterationPath")
+    val iterationPath: String,
+    @Json(name = "areaPath")
+    val areaPath: String,
+    @Json(name = "workItemContent")
+    val workItemContent: String
 )

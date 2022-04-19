@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">TFSPushTool</string>
     <string name="tfs_address">TFS Address</string>
-    <string name="token_information">Token information</string>
-    <string name="user_name">User Name</string>
-    <string name="message">Message</string>
+    <string name="token">Token</string>
+    <string name="backlogTitle">Backlog Title</string>
+    <string name="assignedTo">Assigned To</string>
+    <string name="iterationPath">Iteration Path</string>
+    <string name="areaPath">Area Path</string>
+    <string name="workItemContent">Work Item Content</string>
     <string name="push">Push</string>
 </resources>
